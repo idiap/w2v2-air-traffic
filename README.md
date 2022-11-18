@@ -5,7 +5,7 @@
         <img alt="GitHub" src="https://img.shields.io/badge/License-MIT-green.svg">
     </a>
     <a href="https://colab.research.google.com/github/idiap/w2v2-air-traffic/blob/main/src/eval_xlsr_atc_model.ipynb">
-        <img alt="GitHub" src="https://colab.research.google.com/assets/colab-badge.svg\">
+        <img alt="GitHub" src="https://colab.research.google.com/assets/colab-badge.svg">
     </a>
     <a href="https://github.com/idiap/w2v2-air-traffic">
         <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Open%20source-green\">
