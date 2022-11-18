@@ -4,7 +4,15 @@
     <a href="https://github.com/JuanPZuluaga/w2v2-air-traffic/blob/master/LICENSE">
         <img alt="GitHub" src="https://img.shields.io/badge/License-MIT-green.svg">
     </a>
+    <a href="https://colab.research.google.com/github/idiap/w2v2-air-traffic/blob/main/src/eval_xlsr_atc_model.ipynb">
+        <img alt="GitHub" src="https://colab.research.google.com/assets/colab-badge.svg\">
+    </a>
+    <a href="https://github.com/idiap/w2v2-air-traffic">
+        <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Open%20source-green\">
+    </a>
 </p>
+
+
 
 Code for the paper [How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted ASR? An Extensive Benchmark on Air Traffic Control Communications](https://arxiv.org/abs/2203.16822). To appear at [IEEE Spoken Language Technology Workshop (SLT 2022)](https://slt2022.org/)
 
