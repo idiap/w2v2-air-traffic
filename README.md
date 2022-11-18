@@ -1,7 +1,7 @@
 # How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted ASR? An Extensive Benchmark on Air Traffic Control Communications 
 
 <p align="center">
-    <a href="https://github.com/JuanPZuluaga/w2v2-air-traffic/blob/master/LICENSE">
+    <a href="https://github.com/idiap/w2v2-air-traffic/blob/master/LICENSE">
         <img alt="GitHub" src="https://img.shields.io/badge/License-MIT-green.svg">
     </a>
     <a href="https://colab.research.google.com/github/idiap/w2v2-air-traffic/blob/main/src/eval_xlsr_atc_model.ipynb">
