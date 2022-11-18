@@ -5,13 +5,18 @@
         <img alt="GitHub" src="https://img.shields.io/badge/License-MIT-green.svg">
     </a>
     <a href="https://colab.research.google.com/github/idiap/w2v2-air-traffic/blob/main/src/eval_xlsr_atc_model.ipynb">
-        <img alt="GitHub" src="https://colab.research.google.com/assets/colab-badge.svg">
+        <img alt="Colab" src="https://colab.research.google.com/assets/colab-badge.svg">
+    </a>
+    <a href="https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim">
+        <img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow">
     </a>
     <a href="https://github.com/idiap/w2v2-air-traffic">
-        <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Open%20source-green\">
+        <img alt="GitHub" src="https://img.shields.io/badge/GitHub-Open%20source-green">
+    </a>
+    <a href="https://github.com/psf/black">
+        <img alt="Black" src="https://img.shields.io/badge/code%20style-black-000000.svg">
     </a>
 </p>
-
 
 
 Code for the paper [How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted ASR? An Extensive Benchmark on Air Traffic Control Communications](https://arxiv.org/abs/2203.16822). To appear at [IEEE Spoken Language Technology Workshop (SLT 2022)](https://slt2022.org/)
@@ -32,7 +37,6 @@ Code for the paper [How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted A
     comparison to hybrid-based ASR baselines by only fine-tuning E2E acoustic
     models with a smaller fraction of labeled data. We analyze WERs on the
     low-resource scenario and gender bias carried by one ATC dataset.
-
 </details>
 
 <p align="center">
@@ -50,7 +54,7 @@ Models in HuggingFace:
 2) Finetuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on ATCOSIM data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim
 
 
-Repository written by [Juan Pablo Zuluaga](https://juanpzuluaga.github.io/)
+**Repository written by**: [Juan Pablo Zuluaga](https://juanpzuluaga.github.io/).
 
 ---
 ## Table of Contents
