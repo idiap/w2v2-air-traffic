@@ -133,7 +133,7 @@ Zuluaga-Gomez, J., Prasad, A., Nigmatulina, I., Sarfjoo, S., Motlicek, P., Klein
 or use the bibtex item:
 
 ```
-@article{zuluaga2022bertraffic,
+@article{zuluaga2022how,
     title={How Does Pre-trained Wav2Vec2. 0 Perform on Domain Shifted ASR? An Extensive Benchmark on Air Traffic Control Communications},
     author={Zuluaga-Gomez, Juan and Prasad, Amrutha and Nigmatulina, Iuliia and Sarfjoo, Saeed and Motlicek, Petr and Kleinert, Matthias and Helmke, Hartmut and Ohneiser, Oliver and Zhan, Qingran},
     journal={IEEE Spoken Language Technology Workshop (SLT), Doha, Qatar},
