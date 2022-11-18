@@ -40,7 +40,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def get_kenlm_processor(model_path, path_lm=None):
     """Function that instantiate the models and then gives them back for evaluation"""
 
-    path_tokenizer = os.path.dirname(model_path)
+    path_tokenizer = os.path.dirname(Path(model_path))
 
     # check that we send the right dir where the model is stored
     if Path(model_path).is_dir():
@@ -111,7 +111,6 @@ def parse_args():
         default=False,
         help="whether to print the output into the models' fodler.",
     )
-
 
     # must give,
     parser.add_argument(
@@ -223,8 +222,8 @@ def main():
     )
 
     if args.print_output is not None:
-        output_folder = os.path.dirname(path_model) + "/output/" + os.path.basename(path_test_set)
-    
+        output_folder = os.path.dirname(path_model) + "/output/" + os.path.basename(Path(path_test_set))
+
         # create the folder if not present
         if not os.path.isdir(f"{output_folder}"):
             os.makedirs(f"{output_folder}", exist_ok=True)
@@ -232,12 +231,10 @@ def main():
         # write the WER output to a file
         with open(f"{output_folder}/wer_metrics", "a") as o:
             o.write("---------------Test Statistics---------------\n")
-            o.write("---------------------------------------------\n")
             o.write(f"----LM used {path_lm}---\n")
             o.write("WER: \t\t{:2f}\n".format(wer_nolm))
             o.write("WER with CTC+LM: \t\t{:2f}\n".format(wer_lm_ctc))
             o.write("-------------END STATISTICS------------------\n")
-            o.write("---------------------------------------------\n")
 
         print(f"*** printing the ASR results in {output_folder}/hypo ***")
         with open(f"{output_folder}/gt", mode="w") as trans_f:

@@ -36,6 +36,14 @@ Code for the paper [How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted A
 </p>
 
 
+Models in HuggingFace: 
+
+1) Finetuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on ATCOSIM data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim
+2) Finetuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on ATCOSIM data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim
+
+
+Repository written by [Juan Pablo Zuluaga](https://juanpzuluaga.github.io/)
+
 ---
 ## Table of Contents
 - [Preparing Environment](#preparing-environment)
@@ -72,6 +80,23 @@ export PYTHONPATH=$PYTHONPATH:$(pwd) #assuming you are in root repository folder
 # Usage
 
 There are several steps to replicate/use our proposed models:
+
+## Out-of-the box model on HuggingFace
+
+- You can use directly our model out-of-box by following the details here: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim#writing-your-own-inference-script
+- The model is trained on [ATCOSIM database](https://www.spsc.tugraz.at/databases-and-tools/atcosim-air-traffic-control-simulation-speech-corpus.html). The ATCOSIM dataset is already prepared in Datasets format here: https://huggingface.co/datasets/Jzuluaga/atcosim_corpus
+
+**You can download the data prepared, filtered and ready to go** by doing:
+
+```python
+from datasets import load_dataset
+
+DATASET_ID = "Jzuluaga/atcosim_corpus"
+
+# Load the dataset
+atcosim_corpus_train = load_dataset(DATASET_ID, "train", split="train")
+atcosim_corpus_test = load_dataset(DATASET_ID, "test", split="test")
+```
 
 ## Download the Data
 
@@ -114,7 +139,7 @@ Another use case is to modify the training or evaluation data:
 - `--dataset-name "experiments/data/atcosim_corpus/train" `
 -  `--eval-dataset-name "experiments/data/atcosim_corpus/test"`
 
-This snipped below can be used as:
+The snippet of code below can be used for fine-tuning directly a model:
 
 ```bash
 bash src/run_asr_fine_tuning.sh \
@@ -135,7 +160,7 @@ This will train a `wav2vec2-large-960h-lv60-self` with ATCOSIM corpus for 5k ste
 
 ### Replicate Figure 1
 
-- If you use `--max-train-samples xxxxx`, where `xxxx` is the number of samples to use, you can easily replicate the plot from Figure 1 of our [paper](https://arxiv.org/abs/2203.16822).
+- If you use `--max-train-samples xxxxx`, where `xxxxx` is the number of samples to use, you can easily replicate the Figure 1 plot in our [paper](https://arxiv.org/abs/2203.16822).
 
 ---
 ## Train baselines

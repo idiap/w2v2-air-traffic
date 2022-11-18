@@ -409,10 +409,6 @@ def create_vocabulary_from_data(
 
     return vocab_dict
 
-
-import ipdb
-
-
 def main():
     # See all possible arguments in src/transformers/training_args.py
     # or by passing the --help flag to this script.
@@ -481,7 +477,7 @@ def main():
             "train",
             data_dir=data_args.dataset_name,
             split=data_args.train_split_name,
-            cache_dir=data_args.dataset_name + "/cache",
+            cache_dir = f".cache/{training_args.output_dir}/train",
         )
 
         if data_args.audio_column_name not in raw_datasets["train"].column_names:
@@ -509,7 +505,7 @@ def main():
             "test",
             data_dir=data_args.eval_dataset_name,
             split=data_args.eval_split_name,
-            cache_dir=data_args.eval_dataset_name + "/cache",
+            cache_dir = f".cache/{training_args.output_dir}/test",
         )
 
         if data_args.max_eval_samples is not None:
@@ -645,8 +641,6 @@ def main():
     # freeze encoder
     if model_args.freeze_feature_encoder:
         model.freeze_feature_encoder()
-
-    #  ipdb.set_trace()
 
     # 6. Now we preprocess the datasets including loading the audio, resampling and normalization
     # Thankfully, `datasets` takes care of automatically loading and resampling the audio,
