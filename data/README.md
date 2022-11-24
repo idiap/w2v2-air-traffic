@@ -99,10 +99,6 @@ experiments/data/
 │   ├── prep
 │   ├── test
 │   └── train
-├── minerva
-│   ├── test
-│   ├── test_no_overlaps
-│   └── train
 └── uwb_atcc
     ├── prep
     ├── test
