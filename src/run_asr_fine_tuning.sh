@@ -30,6 +30,7 @@ preprocessing_num_workers=$(echo "$(( $(nproc)-1 ))" )
 num_epochs=50
 max_steps=3000
 per_device_train_batch_size=12
+per_device_eval_batch_size=12
 gradient_acc=3
 learning_rate="1e-4"
 save_steps=1000
@@ -47,9 +48,9 @@ activation_dropout="0.0"
 attention_dropout="0.0"
 feat_proj_dropout="0.0"
 mask_time_prob="0.0"
-mask_time_length="10"
+mask_time_length="12"
 mask_feature_prob="0.0"
-mask_feature_length="10"
+mask_feature_length="12"
 
 . data/utils/parse_options.sh
 
@@ -85,8 +86,8 @@ if [ "$freeze_feature_encoder" = "true" ]; then
 fi
 
 # redefine the output_dir name:
-basename_dir=${layerdrop}ld_${activation_dropout}ad_${attention_dropout}attd_${feat_proj_dropout}fpd_${mask_time_prob}mtp_${mask_time_length}mtl_${mask_feature_prob}mfp_${mask_feature_length}mfl
-output_dir=${output_dir}/$basename_dir
+basename_dir=${layerdrop}ld_${activation_dropout}ad_${attention_dropout}attd_${feat_proj_dropout}fpd_${mask_time_prob}mtp_${mask_time_length}mtl_${mask_feature_prob}mfp_${mask_feature_length}mfl_${gradient_acc}acc
+output_dir=${output_dir}/$basename_dir/
 
 # configure a GPU to use if we a defined 'CMD'
 if [ ! "$cmd" == 'none' ]; then
@@ -106,14 +107,14 @@ $cmd python3 src/run_speech_recognition_ctc.py \
   --preprocessing_num_workers="$preprocessing_num_workers" \
   --model_name_or_path=$model_name_or_path \
   --dataset_name=$dataset_name \
-  --min_duration_in_seconds=1.0 \
+  --min_duration_in_seconds=0.2 \
   --max_duration_in_seconds=20 \
   --eval_dataset_name=$eval_dataset_name \
   --train_split_name=$train_split_name \
   --output_dir=$output_dir \
   --num_train_epochs=$num_epochs \
   --per_device_train_batch_size=$per_device_train_batch_size \
-  --per_device_eval_batch_size=$per_device_train_batch_size \
+  --per_device_eval_batch_size=$per_device_eval_batch_size \
   --gradient_accumulation_steps=$gradient_acc \
   --learning_rate=$learning_rate \
   --weight_decay=0.001 \
@@ -141,7 +142,6 @@ $cmd python3 src/run_speech_recognition_ctc.py \
   --group_by_length \
   --do_train --do_eval \
   $optional_args
-#   --lr_scheduler_type="linear" \
 
 echo "Done training of $model_name_or_path in $output_dir"
 exit 0

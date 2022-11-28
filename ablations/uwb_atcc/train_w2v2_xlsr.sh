@@ -28,7 +28,7 @@ exp="experiments/results/baselines"
 max_steps=10000
 per_device_train_batch_size=16
 gradient_acc=2
-learning_rate="5e-4"
+learning_rate="1e-4"
 mask_time_prob="0.01"
 
 # calling the bash script

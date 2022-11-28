@@ -244,8 +244,7 @@ def _remove_special_characters(text):
     # first remove words between [] and <>
     text = " ".join(
         [
-            x
-            for x in text
+            x for x in text
             if "[" not in x and "]" not in x and "<" not in x and ">" not in x
         ]
     )

@@ -161,7 +161,7 @@ def main():
         "test",
         data_dir=path_test_set,
         split="test",
-        cache_dir=path_test_set + "/cache",
+        cache_dir = f".cache/eval/{path_test_set}",
     )
 
     def prepare_dataset(batch):

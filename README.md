@@ -48,10 +48,25 @@ Code for the paper [How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted A
 </p>
 
 
-Models in HuggingFace: 
+ASR models in HuggingFace: 
 
-1) Finetuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on ATCOSIM data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim
-2) Finetuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on ATCOSIM data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim
+- For ATCOSIM dataset:
+    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **ATCOSIM** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim
+    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **ATCOSIM** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim
+
+- For UWB-ATCC dataset:
+    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc
+    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim-uwb-atcc
+
+- For ATCOSIM + UWB-ATCC dataset:
+    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **ATCOSIM + UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc
+    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **ATCOSIM + UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim-uwb-atcc
+
+
+Databases prepared in [datasets library](https://github.com/huggingface/datasets) format, on HuggingFace hub: 
+
+- ATCOSIM corpus: https://huggingface.co/datasets/Jzuluaga/atcosim_corpus
+- UWB-ATCC corpus: https://huggingface.co/datasets/Jzuluaga/uwb_atcc
 
 
 **Repository written by**: [Juan Pablo Zuluaga](https://juanpzuluaga.github.io/).
@@ -104,6 +119,8 @@ There are several steps to replicate/use our proposed models:
 from datasets import load_dataset
 
 DATASET_ID = "Jzuluaga/atcosim_corpus"
+# or for UWB-ATCC corpus
+# DATASET_ID = "Jzuluaga/uwb_atcc"
 
 # Load the dataset
 atcosim_corpus_train = load_dataset(DATASET_ID, "train", split="train")
@@ -271,7 +288,7 @@ Here is a list of papers that are somehow related to AI/ML targeted to Air traff
 
 - Fine-tuning a pretrained BERT model on the named entity recognition task to perform text-based diarization for ATC communications: 
     - paper: [BERTraffic: BERT-based Joint Speaker Role and Speaker Change Detection for Air Traffic Control Communications](https://arxiv.org/abs/2110.05781)
-    - code: https://github.com/JuanPZuluaga/bert-text-diarization-atc
+    - code: https://github.com/idiap/bert-text-diarization-atc
 
 - How to use contextual data (biasing) in ATC automatic speech recognition:
     - Paper: [A two-step approach to leverage contextual data: speech recognition in air-traffic communications](https://arxiv.org/abs/2202.03725)
