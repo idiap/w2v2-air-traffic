@@ -40,7 +40,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 def get_kenlm_processor(model_path, path_lm=None):
     """Function that instantiate the models and then gives them back for evaluation"""
 
-    path_tokenizer = os.path.dirname(Path(model_path))
+    path_tokenizer = model_path
 
     # check that we send the right dir where the model is stored
     if Path(model_path).is_dir():
@@ -222,7 +222,7 @@ def main():
     )
 
     if args.print_output is not None:
-        output_folder = os.path.dirname(path_model) + "/output/" + os.path.basename(Path(path_test_set))
+        output_folder = path_model + "/output/" + os.path.basename(os.path.dirname(Path(path_test_set)))
 
         # create the folder if not present
         if not os.path.isdir(f"{output_folder}"):

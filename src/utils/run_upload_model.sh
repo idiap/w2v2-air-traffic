@@ -14,7 +14,7 @@ set -euo pipefail
 
 path_to_lm="experiments/data/uwb_atcc/train/lm/uwb_atcc_4g.binary"
 path_to_model="experiments/results/robust_model/wav2vec2-xls-r-300m/atcosim_corpus/0.0ld_0.05ad_0.05attd_0.0fpd_0.03mtp_10mtl_0.0mfp_10mfl/"
-output_folder="notebooks"
+output_folder=".cache/"
 repository_name="wav2vec2-xls-r-300m-en-atc-atcosim"
 
 . data/utils/parse_options.sh

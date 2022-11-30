@@ -51,22 +51,26 @@ Code for the paper [How Does Pre-trained Wav2Vec 2.0 Perform on Domain Shifted A
 ASR models in HuggingFace: 
 
 - For ATCOSIM dataset:
-    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **ATCOSIM** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim
-    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **ATCOSIM** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim
+    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **ATCOSIM** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim | <a href="https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-atcosim"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
+
+    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **ATCOSIM** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim | | <a href="https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
 
 - For UWB-ATCC dataset:
-    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc
-    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim-uwb-atcc
+    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc | <a href="https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
+
+    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-uwb-atcc | <a href="https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-uwb-atcc"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
 
 - For ATCOSIM + UWB-ATCC dataset:
-    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **ATCOSIM + UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc
-    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **ATCOSIM + UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-atcosim-uwb-atcc
+    1) Fine-tuned [XLS-R-300m model](https://huggingface.co/facebook/wav2vec2-xls-r-300m) on **ATCOSIM + UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc-and-atcosim | <a href="https://huggingface.co/Jzuluaga/wav2vec2-xls-r-300m-en-atc-uwb-atcc-and-atcosim"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
+
+    2) Fine-tuned [Wav2Vec2-Large-960h-Lv60 + Self-Training](https://huggingface.co/facebook/wav2vec2-large-960h-lv60-self) on **ATCOSIM + UWB-ATCC** data: https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-uwb-atcc-and-atcosim | <a href="https://huggingface.co/Jzuluaga/wav2vec2-large-960h-lv60-self-en-atc-uwb-atcc-and-atcosim"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
 
 
 Databases prepared in [datasets library](https://github.com/huggingface/datasets) format, on HuggingFace hub: 
 
-- ATCOSIM corpus: https://huggingface.co/datasets/Jzuluaga/atcosim_corpus
-- UWB-ATCC corpus: https://huggingface.co/datasets/Jzuluaga/uwb_atcc
+- ATCOSIM corpus: https://huggingface.co/datasets/Jzuluaga/atcosim_corpus | <a href="https://huggingface.co/datasets/Jzuluaga/atcosim_corpus"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
+
+- UWB-ATCC corpus: https://huggingface.co/datasets/Jzuluaga/uwb_atcc | <a href="https://huggingface.co/datasets/Jzuluaga/uwb_atcc"><img alt="GitHub" src="https://img.shields.io/badge/%F0%9F%A4%97-Models%20on%20Hub-yellow"> </a>
 
 
 **Repository written by**: [Juan Pablo Zuluaga](https://juanpzuluaga.github.io/).
@@ -324,4 +328,15 @@ or use the bibtex item:
     journal={IEEE Spoken Language Technology Workshop (SLT), Doha, Qatar},
     year={2022}
   }
+```
+
+and,
+
+```
+@article{zuluaga2022atco2,
+  title={ATCO2 corpus: A Large-Scale Dataset for Research on Automatic Speech Recognition and Natural Language Understanding of Air Traffic Control Communications},
+  author={Zuluaga-Gomez, Juan and Vesel{\`y}, Karel and Sz{\"o}ke, Igor and Motlicek, Petr and others},
+  journal={arXiv preprint arXiv:2211.04054},
+  year={2022}
+}
 ```
