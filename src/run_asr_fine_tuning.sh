@@ -15,7 +15,7 @@
 set -euo pipefail
 
 # static vars
-cmd='none'
+cmd=""
 
 _VOCABULARY_PATH="config/vocab.json"
 
