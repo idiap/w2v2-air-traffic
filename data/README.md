@@ -1,11 +1,21 @@
 # Data preparation scripts 
 
 ## Table of Contents
+- [Installing missing libraries](#installing-missing-libraries)
 - [Downloading Data](#downloading-data)
 - [Preparing the Data](#preparing-the-data)
 - [Cite us](#how-to-cite-us)
 
 ---
+
+## Installing missing libraries
+
+For the preparation scripts to work correctly, `libsox-dev` should be installed:
+```
+sudo apt install libsox-dev
+sudo apt install sox
+```
+
 ## Downloading Data
 
 For the experiments carried out in this paper, you need to download the data folder one by one as follows:
